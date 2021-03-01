@@ -1,49 +1,7 @@
-SSG : Satellite System Graph For Approximate Nearest Neighbor Search
+My SSG :
 ======
 
-SSG is a graph-based approximate nearest neighbor search (ANNS) algorithm. It provides a flexible and efficient solution for the metric-free large-scale ANNS on dense real vectors. 
-It implements the algorithm of our paper: [Satellite System Graph: Towards the Efficiency Up-Boundary of Graph-Based Approximate Nearest Neighbor Search](https://arxiv.org/abs/1907.06146)
-
-Benchmark datasets
-------
-
-| Data set  | Download                 | dimension | nb base vectors | nb query vectors | original website                                               |
-|-----------|--------------------------|-----------|-----------------|------------------|----------------------------------------------------------------|
-| SIFT1M    |[original website](http://corpus-texmex.irisa.fr/)| 128       | 1,000,000       | 10,000           | [original website](http://corpus-texmex.irisa.fr/)             |
-| GIST1M    |[original website](http://corpus-texmex.irisa.fr/)| 128       | 1,000,000       | 1,000            | [original website](http://corpus-texmex.irisa.fr/)             |
-| Crawl     | [crawl.tar.gz](http://downloads.zjulearning.org.cn/data/crawl.tar.gz) (1.7GB)     | 300       | 1,989,995       | 10,000           | [original website](http://commoncrawl.org/)                    |
-| GloVe-100 | [glove-100.tar.gz](http://downloads.zjulearning.org.cn/data/glove-100.tar.gz) (424MB) | 100       | 1,183,514       | 10,000           | [original website](https://nlp.stanford.edu/projects/glove/)   |
-| Deep100M  | deep100m.tar.gz* (34GB)  | 96        | 100,000,000     | 10,000           | [original website](http://sites.skoltech.ru/compvision/noimi/) |
-
-* For Deep100M we will provide the download link upon request
-
-ANNS performance
-------
-
-The performance was tested without parallelism.
-Among all the ***graph-based algorithms***, NSG and SSG has ***the smallest index size***.
-
-![Performance](pictures/Performances.jpg)
-
-Compared Algorithms:
-
-#### Tree-based
-
-* [FLANN](http://www.cs.ubc.ca/research/flann/)
-* [Annoy](https://github.com/spotify/annoy)
-
-#### Quantization-based
-
-* [Faiss](https://github.com/facebookresearch/faiss)
-
-#### Graph-based
-
-* [KGraph](http://www.kgraph.org)
-* [HNSW](https://github.com/searchivarius/nmslib)
-* [DPG](https://github.com/DBWangGroupUNSW/nns_benchmark)
-* [NSG](https://github.com/zjulearning/nsg) - our previous [paper](http://www.vldb.org/pvldb/vol12/p461-fu.pdf), [code](https://github.com/ZJULearning/nsg).
-
-> Please see our [NSG paper](http://www.vldb.org/pvldb/vol12/p461-fu.pdf) for the performance of other graph-based algorithms - [FANNG](https://pdfs.semanticscholar.org/9ea6/5687a21c869fce7ecf17ca25ffcadbf77d69.pdf).
+My SSG is a graph-based approximate nearest neighbor search (ANNS) algorithm. It improves the selection of the positions of the navigation points originally randomly distributed in the SSG to obtain a faster search effect.It provides a flexible and efficient solution for the metric-free large-scale ANNS on dense real vectors. 
 
 How to use
 ------
